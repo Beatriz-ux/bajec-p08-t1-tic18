@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     int i, j, max = 0;
-    int cont[20] = {0}, num[100], numMax[20] = {0};
+    int cont[20] = {0};
     srand(time(NULL));
 
     //a)
