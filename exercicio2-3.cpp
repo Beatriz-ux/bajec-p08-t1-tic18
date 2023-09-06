@@ -3,7 +3,7 @@
 using namespace std; 
 
 int main(){
-    float notas1[15], notas2[15];
+    float notas1[15], notas2[15], media[15];
     srand(time(NULL));
 
     for (int i=0; i<15; i++){
@@ -18,6 +18,9 @@ int main(){
         cout <<((notas1[i] == notas2[i]) ? " Manteve a nota" : 
                 ((notas1[i] > notas2[i])? " Piorou": " Melhorou")) << endl;
         cout << "Nota 1 = " << notas1[i] << " | Nota 2 = " << notas2[i]<< "\n\n";
+
+        // d)
+        media[i] = (notas1[i] + notas2[i])/2;
     }
 
 
