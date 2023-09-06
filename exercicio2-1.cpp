@@ -11,7 +11,7 @@ int main(){
     cout << "Numeros aleatorios: \n";
     for(i=0; i<100; i++){
         num[i] = 1 + rand()%20;
-        cout << i+1 << "\n" << num[i] << endl;
+        cout << i+1 << "\t" << num[i] << endl;
 
         //b)
         cont[num[i]-1]++;
@@ -33,18 +33,11 @@ int main(){
         }
     }
 
-    for (i=0, j=0; i<20; i++){
-        if (cont[i] == max){
-            numMax[j] = i+1;
-            j++;
-        }
-    }
 
     cout << "\nO(s) numero(s) que mais aparece(m) e(sao): ";
-    i = 0;
-    while(numMax[i] !=0){
-        cout << numMax[i] << " ";
-        i++;
+    for (i=0; i<20; i++){
+        if (cont[i] == max)
+            cout << i+1 << " ";
     }
     cout << endl;
 
