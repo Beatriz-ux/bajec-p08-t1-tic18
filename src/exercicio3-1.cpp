@@ -1,27 +1,56 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
 int main(){
-    string data;
-    int pos1, pos2, dia, mes, ano;
+    char data[11], temp[8];
+    int dia, mes, ano;
+    int i, j;
 
     // a)
     cout << "Digite um dia no d/m/a: ";
     cin >> data;
 
-    pos1 = data.find_first_of('/');
-    pos2 = data.find_last_of('/');
 
-    // b)
-    dia = stoi(data.substr(0,pos1));
-    mes = stoi(data.substr(pos1+1, pos2-pos1-1));
-    ano = stoi(data.substr(pos2+1));
+
+
+    // a)
+    for (i=0, j=0; i<strlen(data); i++){
+        if (data[i] != '/'){
+            temp[j] = data[i];
+            j++;
+        }else{
+            temp[j] = '\0';
+            dia = atoi(temp);
+            break;
+        }
+    }
+
+    for (++i, j=0; i<strlen(data); i++){
+        if (data[i] != '/'){
+            temp[j] = data[i];
+            j++;
+        }else{
+            temp[j] = '\0';
+            mes = atoi(temp);
+            break;
+        }
+    }
+
+    for (++i, j=0; i<strlen(data); i++){
+            temp[j] = data[i];
+            j++;
+    }
+    temp[j] = '\0';
+    ano = atoi(temp);
+
+
     cout << "Dia: " << dia << endl;
     cout << "Mes: " << mes << endl;
     cout << "Ano: " << ano << endl;
 
+    // b)
     if (dia>=1){
         switch (mes){
             case 1:
