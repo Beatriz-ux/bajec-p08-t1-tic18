@@ -27,7 +27,7 @@ int main(){
     // d)
     for (int i=0; i<250; i++){
         if (estacaoMet[i] > media)
-            estacaoMet[i]++;
+            estacaoMet[i]+=1;
         if (estacaoMet[i] < media)
             estacaoMet[i]-=2;
     }
