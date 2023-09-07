@@ -2,17 +2,6 @@
 
 using namespace std;
 
-/*
-A seguinte expressão em C++ gera um valor inteiro aleatório entre 1 e 20: 1
-+ rand()%20. Utilizando esta expressão desenvolva uma aplicação que:
-a. Preencha um array com 100 elementos de tipo int, com valores
-aleatoriamente gerados entre 1 e 20;
-b. Utilize um array de 20 posições para determinar quantas vezes se
-repete cada um dos possíveis valores gerados no array;
-c. Determine qual ou quais os números que mais vezes aparecem no
-array;
-*/
-
 int main(void){
     srand(time(NULL));
 
