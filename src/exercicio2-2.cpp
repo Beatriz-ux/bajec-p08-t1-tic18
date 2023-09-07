@@ -2,16 +2,16 @@
 using namespace std;
 int main (void)
 {
-    double temp[2], max=0, min=41, mediaT=0;
+    double temp[250], max=0, min=41, mediaT=0;
     srand(time(NULL));
 
-    for(int i=0; i<2; i++)
+    for(int i=0; i<250; i++)
     {
         temp[i] = 10 + 30.0 * ((rand() % 3000)/2999.0);
         cout << "Temperatura " << i+1 << ": " << temp[i] << endl;
         mediaT += temp[i];
     }
-    for(int i=0; i<2; i++)
+    for(int i=0; i<250; i++)
     {
         if(max < temp[i])
         {
