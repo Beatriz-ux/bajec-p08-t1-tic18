@@ -4,7 +4,7 @@ using namespace std;
 
 int main(void)
 {
-    char data[11], temp[5],mesC[10];
+    char data[11], temp[5], mesC[10];
     cout << "Digite a data no formato dd/mm/aaaa: ";
     cin >> data;
     int i = 0, j = 0, dia, mes, ano;
