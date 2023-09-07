@@ -18,5 +18,9 @@ int main(){
         }
     }
 
+    // b)
+    string1[0] = toupper(string1[0]);
+    string2[0] = toupper(string2[0]);
+
     return 0;
 }
