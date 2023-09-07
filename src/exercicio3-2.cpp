@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <cstring>
 
 using namespace std;
 
@@ -21,6 +22,9 @@ int main(){
     // b)
     string1[0] = toupper(string1[0]);
     string2[0] = toupper(string2[0]);
+
+    // c)
+    cout << ((strcmp(string1, string2)>0)?  string2 : string1) << " | " <<  ((strcmp(string1, string2)>0)?  string1 : string2) << endl; 
 
     return 0;
 }
