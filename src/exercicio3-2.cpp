@@ -10,8 +10,10 @@ int main(void)
         palavra1[i] = 'a' + rand() % ('z' - 'a');
         palavra2[i] = 'a' + rand() % ('z' - 'a');
     }
+    //Finaliza a string
     palavra1[10] = '\0';
     palavra2[10] = '\0';
+    //Transforma a primeira letra em maiuscula
     palavra1[0] = toupper(palavra1[0]);
     palavra2[0] = toupper(palavra2[0]);
 
