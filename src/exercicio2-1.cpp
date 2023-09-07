@@ -2,30 +2,29 @@
 using namespace std;
 int main(void)
 {
-    int val[100], cont[20] = {0}, i = 0, maior[20] = {0}, max = 0, min = 100;
+    int val[100], cont[20] = {0}, max = 0, min = 100;
     srand(time(NULL));
     cout << "Numero aleatorios de 1 a 20:" << endl;
-
+    //gerando e preenchendo o vetor
     for (int i = 0; i < 100; i++)
     {
         val[i] = 1 + rand() % 20;
         cout << val[i] << " " << endl;
         cont[val[i] - 1]++;
     }
-    cout << "Numero de vezes que cada numero aparece:" << endl;
+    cout << "Num"
+         << "\t Qtd"
+         << "\tHistograma" << endl;
     for (int i = 0; i < 20; i++)
     {
-        cout << i + 1 << " -> \t" << cont[i];
+        cout << i + 1 << "\t" << cont[i] << "\t";
         for (int j = 0; j < cont[i]; j++)
         {
             cout << "#";
         }
         cout << endl;
-    }
 
-    for (int i = 0; i < 20; i++)
-    {
-
+        // maior e menor frequencia
         if (max < cont[i])
         {
             max = cont[i];
