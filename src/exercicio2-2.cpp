@@ -22,11 +22,11 @@ int main (void)
             min = temp[i];
         }
     }
-    mediaT /= 2;
+    mediaT /= 250;
     cout << "A maior temperatura foi: " << max << endl;
     cout << "A menor temperatura foi: " << min << endl;
     cout << "A media das temperaturas foi: " << mediaT << endl;
-    for(int i=0; i<2; i++)
+    for(int i=0; i<250; i++)
     {
         if(temp[i] > mediaT)
         {
@@ -38,7 +38,7 @@ int main (void)
         }
         
     }
-    for(int i=0;i<2;i++)
+    for(int i=0;i<250;i++)
     {
         cout << "Nova Temperatura " << i+1 << ": " << temp[i] << endl;
     }
