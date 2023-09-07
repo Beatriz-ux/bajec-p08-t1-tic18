@@ -30,7 +30,6 @@ int main(void)
 
     j = 0;
     mes = atoi(temp);
-    cout << "mes" << mes << endl;
 
     if (mes < 1 || mes > 12)
     {
@@ -44,7 +43,6 @@ int main(void)
         i++;
     }
     ano = atoi(temp);
-    cout << "ano" << ano << endl;
 
     if (ano == 0)
     {
