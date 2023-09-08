@@ -22,5 +22,12 @@ int main(){
         }
     }
 
+    //b)
+    for(i=0; i<qntdStrings; i++){
+        strings[i][0] = toupper(strings[i][0]);
+        cout << strings[i]<< endl;
+    }
+
+
     return 0;
 }
