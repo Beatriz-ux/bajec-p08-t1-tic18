@@ -3,7 +3,7 @@
 ## Atividade
 
 <p>
-  Nesta atividade trabalhamos na resolução de problemas em C++ através do uso de numeros aleatorios de manipulação de arrays e atrings tipo C.
+  Nesta atividade trabalhamos na resolução de problemas em C++ através do uso de numeros aleatorios de manipulação de arrays e strings tipo C.
 </p>
 
 ## Desenvolvedores
