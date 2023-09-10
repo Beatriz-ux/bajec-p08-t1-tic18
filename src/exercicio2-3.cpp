@@ -2,49 +2,40 @@
 
 using namespace std;
 
-int main(void){
-    srand(time(NULL));
-
-    int qtdeAlunos = 15;
-    float notas1[qtdeAlunos], notas2[qtdeAlunos], medias[qtdeAlunos];
-
-    //a)
-    cout << "Notas da primeira avaliação:" << endl;
-    for(int i = 0; i < qtdeAlunos; i++){
-        notas1[i] = ((float)rand()/RAND_MAX)*10;
-        cout << "Aluno " << i+1 << ": " << notas1[i] << endl;
+int main(void)
+{
+    float notas[15] = {0}, notas2[15] = {0}, media[15] = {0};
+    cout << fixed;
+    cout.precision(2);
+    for (int i = 0; i < 15; i++)
+    {
+        notas[i] = ((float)rand() / RAND_MAX) * 10;
+        notas2[i] = ((float)rand() / RAND_MAX) * 10;
+        media[i] = (notas[i] + notas2[i]) / 2;
     }
-
-    cout << endl;
-    //b)
-    cout << "Notas da segunda avaliação:" << endl;
-    for(int i = 0; i < qtdeAlunos; i++){
-        notas2[i] = ((float)rand()/RAND_MAX)*10;
-        cout << "Aluno " << i+1 << ": " << notas2[i] << endl;
-    }
-
-    cout << endl;
-
-    //c)
-    cout << "Comparação das notas 1 e 2:" << endl;
-    for(int i = 0; i < qtdeAlunos; i++){
-        cout << "Aluno " << i+1 << ": ";
-        if(notas2[i] > notas1[i])
-            cout << "Melhorou" << endl;
-        else if(notas2[i] < notas1[i])
-            cout << "Piorou" << endl;
+    cout << "\t\tDESEMPENHO DOS ALUNOS" << endl;
+    cout << "--\t"
+         << "n1\t"
+         << "n2\t"
+         << "desempenho\t"
+         << "media\t" << endl;
+    for (int i = 0; i < 15; i++)
+    {
+        cout << "[" << i + 1 << "]"
+             << "\t" << notas[i] << "\t" << notas2[i] << "\t";
+        if (notas[i] > notas2[i])
+        {
+            cout << "piorou  ";
+        }
+        else if (notas[i] < notas2[i])
+        {
+            cout << "melhorou ";
+        }
         else
-            cout << "Manteve a nota" << endl;
+        {
+            cout << "manteve ";
+        }
+        cout << "\t" << media[i] << endl;
     }
-
-    cout << endl;
-
-    //d)
-    cout << "Médias:" << endl;
-    for(int i = 0; i < qtdeAlunos; i++){
-        medias[i] = (notas1[i] + notas2[i])/2;
-        cout << "Aluno " << i+1 << ": " << medias[i] << endl;
-    }
-
     return 0;
 }

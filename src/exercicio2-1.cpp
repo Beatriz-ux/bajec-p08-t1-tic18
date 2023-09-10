@@ -2,44 +2,55 @@
 
 using namespace std;
 
-int main(void){
+int main(void)
+{
+    int val[100], cont[20] = {0}, max = 0, min = 100;
     srand(time(NULL));
-
-    int nums[100];
-    int count[20] = {0};
-    int max, i;
-
-    for(int i = 0; i < 100; i++){
-        nums[i] = 1 + rand()%20;
-        count[nums[i]-1]++;
-
-        cout << nums[i] << " ";
+    cout << "Numero aleatorios de 1 a 20:" << endl;
+    //gerando e preenchendo o vetor
+    for (int i = 0; i < 100; i++)
+    {
+        val[i] = 1 + rand() % 20;
+        cout << val[i] << " " << endl;
+        cont[val[i] - 1]++;
     }
-    
-    cout << endl << endl;
-
-    for(i = 0; i < 20; i++){
-        cout << i+1 << " - " << count[i] << "\t|";
-        
-        for(int j = 0; j < count[i]; j++){
+    cout << "Num"
+         << "\t Qtd"
+         << "\tHistograma" << endl;
+    for (int i = 0; i < 20; i++)
+    {
+        cout << i + 1 << "\t" << cont[i] << "\t";
+        for (int j = 0; j < cont[i]; j++)
+        {
             cout << "#";
         }
-        
         cout << endl;
 
-        if(count[i] > max){
-            max = count[i];
+        // maior e menor frequencia
+        if (max < cont[i])
+        {
+            max = cont[i];
+        }
+        if (min > cont[i])
+        {
+            min = cont[i];
         }
     }
-
-    cout << endl;
-    cout << "O(s) numero(s) que mais apareceu(ram) foi(ram): " << endl;
-
-    for(i = 0; i < 20; i++){
-        if(count[i] == max){
-            cout << "- "<< i+1 << endl;
+    cout << "O(s) numero(s) que mais aparece(m) e(sao):" << endl;
+    for (int i = 0; i < 20; i++)
+    {
+        if (cont[i] == max)
+        {
+            cout << i + 1 << " " << endl;
         }
     }
-
+    cout << "O(s) numero(s) que menos aparece(m) e(sao):" << endl;
+    for (int i = 0; i < 20; i++)
+    {
+        if (cont[i] == min)
+        {
+            cout << i + 1 << endl;
+        }
+    }
     return 0;
 }
